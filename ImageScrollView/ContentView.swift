@@ -35,16 +35,13 @@ struct ContentView: View {
                             .foregroundColor(.white)
                     })
                     
-                    
-                    Button(action: {
-                        click = "이탈리아"
-                    }, label: {
+                    NavigationLink(destination: ItalyLink(), label: {
                         Text("이탈리아")
+                            .frame(maxWidth: .infinity, maxHeight: 30)
+                            .padding()
+                            .background(Color.green)
+                            .foregroundColor(.white)
                     })
-                    .frame(maxWidth: .infinity, maxHeight: 30)
-                    .padding()
-                    .background(Color.green)
-                    .foregroundColor(.white)
                     
                 }
                 
@@ -53,12 +50,6 @@ struct ContentView: View {
                         Image("Image")
                             .resizable()
                             .scaledToFill()
-                    }
-                }
-                
-                if click == "이탈리아" {
-                    ScrollView(.vertical) {
-                        Text("이탈리아 이미지나 콘텐츠가 여기에 표시됩니다.")
                     }
                 }
             }

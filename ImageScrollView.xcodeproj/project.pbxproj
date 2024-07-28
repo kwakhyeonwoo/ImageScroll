@@ -16,6 +16,7 @@
 		67F6FEEF2C538FA1000610B2 /* ImageScrollViewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F6FEEE2C538FA1000610B2 /* ImageScrollViewUITestsLaunchTests.swift */; };
 		67F6FEFC2C5631E1000610B2 /* SeoulLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F6FEFB2C5631E1000610B2 /* SeoulLink.swift */; };
 		67F6FEFE2C5632D0000610B2 /* ParisLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F6FEFD2C5632D0000610B2 /* ParisLink.swift */; };
+		67F6FF002C56377B000610B2 /* ItalyLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F6FEFF2C56377B000610B2 /* ItalyLink.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		67F6FEEE2C538FA1000610B2 /* ImageScrollViewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollViewUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		67F6FEFB2C5631E1000610B2 /* SeoulLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeoulLink.swift; sourceTree = "<group>"; };
 		67F6FEFD2C5632D0000610B2 /* ParisLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParisLink.swift; sourceTree = "<group>"; };
+		67F6FEFF2C56377B000610B2 /* ItalyLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItalyLink.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				67F6FED72C538FA0000610B2 /* Preview Content */,
 				67F6FEFB2C5631E1000610B2 /* SeoulLink.swift */,
 				67F6FEFD2C5632D0000610B2 /* ParisLink.swift */,
+				67F6FEFF2C56377B000610B2 /* ItalyLink.swift */,
 			);
 			path = ImageScrollView;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			files = (
 				67F6FED42C538F9E000610B2 /* ContentView.swift in Sources */,
 				67F6FED22C538F9E000610B2 /* ImageScrollViewApp.swift in Sources */,
+				67F6FF002C56377B000610B2 /* ItalyLink.swift in Sources */,
 				67F6FEFC2C5631E1000610B2 /* SeoulLink.swift in Sources */,
 				67F6FEFE2C5632D0000610B2 /* ParisLink.swift in Sources */,
 			);
