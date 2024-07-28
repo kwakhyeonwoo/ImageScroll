@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @State fileprivate var click : String = ""
-    @State fileprivate var changeImage : Bool = true
+    @State fileprivate var changeImage : Bool = false
     
     var body: some View {
         
@@ -20,7 +20,7 @@ struct ContentView: View {
                 Spacer()
                 HStack(alignment: .top, spacing: 0){
                     Button(action: {
-                        
+                        click = "서울"
                     }, label: {
                         Text("서울")
                     })
@@ -30,7 +30,7 @@ struct ContentView: View {
                     .foregroundColor(.white)
                     
                     Button(action: {
-                        
+                        click = "프랑스"
                     }, label: {
                         Text("프랑스")
                     })
@@ -40,7 +40,7 @@ struct ContentView: View {
                     .foregroundColor(.white)
                     
                     Button(action: {
-                        
+                        click = "이탈리아"
                     }, label: {
                         Text("이탈리아")
                     })
@@ -58,14 +58,41 @@ struct ContentView: View {
                     Spacer()
                         .frame(maxHeight: .infinity)
                 }
-            }
-            
-            
-            LazyVStack{
-                if(click == "서울"){
-                    
-                    ScrollView(.vertical){
+                
+                //서울 버튼이 클릭되었을 때 해당 VStack을 메모릴에 올리겠다 선언 - Lazy
+                if click == "서울" {
+                    ScrollView{
+                        LazyVStack{
+                            ForEach(0..<50){ index in
+                                ScrollView(.horizontal, showsIndicators: false, content: {
+                                    HStack{
+                                        Image("Seoul\(index)")
+                                            .resizable()
+                                        RoundedRectangle(cornerRadius: 20)
+                                            .fill(Color.white)
+                                            .frame(width: 20, height: 10)
+                                            .shadow(radius: 10)
+                                            .padding()
+                                    }
+                                })
+                            }
+                        }
+                    }
+                }
+                LazyVStack{
+                    if(click == "프랑스"){
                         
+                        ScrollView(.vertical){
+                            
+                        }
+                    }
+                }
+                LazyVStack{
+                    if(click == "이탈리아"){
+                        
+                        ScrollView(.vertical){
+                            
+                        }
                     }
                 }
             }
