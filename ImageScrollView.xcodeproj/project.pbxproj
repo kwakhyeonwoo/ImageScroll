@@ -14,6 +14,8 @@
 		67F6FEE32C538FA1000610B2 /* ImageScrollViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F6FEE22C538FA1000610B2 /* ImageScrollViewTests.swift */; };
 		67F6FEED2C538FA1000610B2 /* ImageScrollViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F6FEEC2C538FA1000610B2 /* ImageScrollViewUITests.swift */; };
 		67F6FEEF2C538FA1000610B2 /* ImageScrollViewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F6FEEE2C538FA1000610B2 /* ImageScrollViewUITestsLaunchTests.swift */; };
+		67F6FEFC2C5631E1000610B2 /* SeoulLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F6FEFB2C5631E1000610B2 /* SeoulLink.swift */; };
+		67F6FEFE2C5632D0000610B2 /* ParisLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F6FEFD2C5632D0000610B2 /* ParisLink.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		67F6FEE82C538FA1000610B2 /* ImageScrollViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageScrollViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67F6FEEC2C538FA1000610B2 /* ImageScrollViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollViewUITests.swift; sourceTree = "<group>"; };
 		67F6FEEE2C538FA1000610B2 /* ImageScrollViewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollViewUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		67F6FEFB2C5631E1000610B2 /* SeoulLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeoulLink.swift; sourceTree = "<group>"; };
+		67F6FEFD2C5632D0000610B2 /* ParisLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParisLink.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 				67F6FED32C538F9E000610B2 /* ContentView.swift */,
 				67F6FED52C538FA0000610B2 /* Assets.xcassets */,
 				67F6FED72C538FA0000610B2 /* Preview Content */,
+				67F6FEFB2C5631E1000610B2 /* SeoulLink.swift */,
+				67F6FEFD2C5632D0000610B2 /* ParisLink.swift */,
 			);
 			path = ImageScrollView;
 			sourceTree = "<group>";
@@ -259,6 +265,8 @@
 			files = (
 				67F6FED42C538F9E000610B2 /* ContentView.swift in Sources */,
 				67F6FED22C538F9E000610B2 /* ImageScrollViewApp.swift in Sources */,
+				67F6FEFC2C5631E1000610B2 /* SeoulLink.swift in Sources */,
+				67F6FEFE2C5632D0000610B2 /* ParisLink.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

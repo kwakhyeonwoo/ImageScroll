@@ -9,35 +9,32 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State fileprivate var click : String = ""
-    @State fileprivate var changeImage : Bool = false
+    @State private var click: String = ""
+
     
     var body: some View {
         
-        NavigationView{
+        NavigationView {
             
             VStack{
                 Spacer()
-                HStack(alignment: .top, spacing: 0){
-                    Button(action: {
-                        click = "서울"
-                    }, label: {
+                HStack(alignment: .top, spacing: 0) {
+                    NavigationLink(destination: SeoulLink(), label: {
                         Text("서울")
+                            .frame(maxWidth: .infinity, maxHeight: 30)
+                            .padding()
+                            .background(Color.red)
+                            .foregroundColor(.white)
                     })
-                    .frame(maxWidth: .infinity, maxHeight: 30)
-                    .padding()
-                    .background(Color.red)
-                    .foregroundColor(.white)
                     
-                    Button(action: {
-                        click = "프랑스"
-                    }, label: {
+                    NavigationLink(destination: ParisLink(), label: {
                         Text("프랑스")
+                            .frame(maxWidth: .infinity, maxHeight: 30)
+                            .padding()
+                            .background(Color.blue)
+                            .foregroundColor(.white)
                     })
-                    .frame(maxWidth: .infinity, maxHeight: 30)
-                    .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
+                    
                     
                     Button(action: {
                         click = "이탈리아"
@@ -50,49 +47,18 @@ struct ContentView: View {
                     .foregroundColor(.white)
                     
                 }
-                    
-                ZStack{
-                    Image("Image")
-                        .resizable()
-                    
-                    Spacer()
-                        .frame(maxHeight: .infinity)
+                
+                ZStack {
+                    if click != "서울" {
+                        Image("Image")
+                            .resizable()
+                            .scaledToFill()
+                    }
                 }
                 
-                //서울 버튼이 클릭되었을 때 해당 VStack을 메모릴에 올리겠다 선언 - Lazy
-                if click == "서울" {
-                    ScrollView{
-                        LazyVStack{
-                            ForEach(0..<50){ index in
-                                ScrollView(.horizontal, showsIndicators: false, content: {
-                                    HStack{
-                                        Image("Seoul\(index)")
-                                            .resizable()
-                                        RoundedRectangle(cornerRadius: 20)
-                                            .fill(Color.white)
-                                            .frame(width: 20, height: 10)
-                                            .shadow(radius: 10)
-                                            .padding()
-                                    }
-                                })
-                            }
-                        }
-                    }
-                }
-                LazyVStack{
-                    if(click == "프랑스"){
-                        
-                        ScrollView(.vertical){
-                            
-                        }
-                    }
-                }
-                LazyVStack{
-                    if(click == "이탈리아"){
-                        
-                        ScrollView(.vertical){
-                            
-                        }
+                if click == "이탈리아" {
+                    ScrollView(.vertical) {
+                        Text("이탈리아 이미지나 콘텐츠가 여기에 표시됩니다.")
                     }
                 }
             }
