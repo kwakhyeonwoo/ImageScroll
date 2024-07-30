@@ -13,7 +13,7 @@ struct ItalyLink: View {
                 LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 20) {
                     ForEach(italyImages, id: \.self) { ItalyImageName in
                         NavigationLink(
-                            destination: ItalyFullScreenImageView(ItalyImageName: ItalyImageName, ItalyImageScale: $ItalyImageScale),
+                            destination: ItalyFullScreenImageView(ItalyImageName: ItalyImageName, bindItalyImageScale: $ItalyImageScale),
                             label: {
                                 Image(ItalyImageName)
                                     .resizable()
@@ -36,7 +36,7 @@ struct ItalyFullScreenImageView : View {
     
     let ItalyImageName : String
     //값 되돌리기 위해 Bindind사용
-    @Binding var ItalyImageScale : Double
+    @Binding var bindItalyImageScale : Double
     
     var body: some View{
         VStack{
@@ -45,14 +45,14 @@ struct ItalyFullScreenImageView : View {
             Image(ItalyImageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .scaleEffect(ItalyImageScale)
+                .scaleEffect(bindItalyImageScale)
                 .gesture(
                     MagnificationGesture()
                         .onChanged{ value in
-                            ItalyImageScale = value.magnitude
+                            bindItalyImageScale = value.magnitude
                         }
                 )
-                .animation(.easeInOut, value: ItalyImageScale)
+                .animation(.easeInOut, value: bindItalyImageScale)
             
             Spacer()
         }

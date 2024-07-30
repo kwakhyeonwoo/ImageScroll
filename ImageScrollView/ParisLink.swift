@@ -19,7 +19,7 @@ struct ParisLink : View {
                 LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 20) {
                     ForEach(parisImages, id: \.self){ parisImages in
                         NavigationLink(
-                            destination: ParisFullScreenImageView(parisImageName: parisImages, parisImageScale: $parisImageScale),
+                            destination: ParisFullScreenImageView(parisImageName: parisImages, bindparisImageScale: $parisImageScale),
                             label: {
                                 Image(parisImages)
                                     .resizable()
@@ -41,7 +41,7 @@ struct ParisLink : View {
 struct ParisFullScreenImageView : View {
     
     let parisImageName : String
-    @Binding var parisImageScale : Double
+    @Binding var bindparisImageScale : Double
     
     var body: some View{
         VStack{
@@ -51,14 +51,14 @@ struct ParisFullScreenImageView : View {
             Image(parisImageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .scaleEffect(parisImageScale)
+                .scaleEffect(bindparisImageScale)
                 .gesture(
                     MagnificationGesture()
                         .onChanged{ value in
-                            parisImageScale = value.magnitude
+                            bindparisImageScale = value.magnitude
                         }
                 )
-                .animation(.easeInOut, value: parisImageScale)
+                .animation(.easeInOut, value: bindparisImageScale)
             
             Spacer()
         }
