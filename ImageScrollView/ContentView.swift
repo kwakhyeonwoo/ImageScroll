@@ -60,3 +60,5 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+
+//이미지 클릭시 이미지 원본 화면크기로 변경
